@@ -33,7 +33,8 @@ model.fit(X_train, y_train)
 start = time()
 y_pred = model.predict(X_test)
 test_end = time() - start
-print('The Median House Value Inference time took ', test_end, ' seconds.')
+print('The Median House Value Inference time for the full model took ', test_end, ' seconds.')
+print('')
 
 # ### Accuracy Evaluation
 #
@@ -45,11 +46,13 @@ print('The Median House Value Inference time took ', test_end, ' seconds.')
 # * Adjusted R-Square
 
 from sklearn import metrics
+print('Full Model Metrics')
 print('MAE:', metrics.mean_absolute_error(y_test, y_pred))
 print('MSE:', metrics.mean_squared_error(y_test, y_pred))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
 print('R square:', metrics.r2_score(y_test, y_pred))
 print('Adjusted R square:', 1 - (1-metrics.r2_score(y_test, y_pred)) * (len(y_pred)-1)/(len(y_pred)-8-1))
+print('')
 
 # sorting the importance scores
 important_index = model.feature_importances_.argsort()[::-1]
@@ -88,15 +91,18 @@ print('The training time took ', train_time_red, ' seconds.')
 start = time()
 y_pred_red = reduced_model.predict(X_test_red)
 test_end = time() - start
-print('The CD Inference time took ', test_end, ' seconds.')
+print('The Median House Value Inference time for the reduced model took ', test_end, ' seconds.')
+print('')
 
 # Accuracy evaluation
 from sklearn import metrics
+print('Reduced Model Metrics')
 print('MAE:', metrics.mean_absolute_error(y_test_red, y_pred_red))
 print('MSE:', metrics.mean_squared_error(y_test_red, y_pred_red))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test_red, y_pred_red)))
 print('R square:', metrics.r2_score(y_test_red, y_pred_red))
 print('Adjusted R square:', 1 - (1-metrics.r2_score(y_test_red, y_pred_red)) * (len(y_pred_red)-1)/(len(y_pred_red)-8-1))
+print('')
 
 # plot prediction vs actual values for all test data
 plt.figure(2)
@@ -167,11 +173,13 @@ min_child_weight = xgb_reg_best_full.min_child_weight
 base_score = xgb_reg_best_full.base_score
 
 # Print the hyperparameters
+print('Best Model Hyperparameters')
 print("n_estimators:", n_estimators)
 print("max_depth:", max_depth)
 print("learning_rate:", learning_rate)
 print("min_child_weight:", min_child_weight)
 print("base_score:", base_score)
+print('')
 
 
 t0 = time()
@@ -179,8 +187,11 @@ y_pred_best = xgb_reg_best_full.predict(X_test)
 t1 = time()
 
 
-print('The Median House Value Inference time took ', t1-t0, ' seconds.')
+print('The Median House Value Inference time for the best model took ', t1-t0, ' seconds.')
+print('')
+
 from sklearn import metrics
+print('Best Model Metrics')
 print('MAE:', metrics.mean_absolute_error(y_test, y_pred_best))
 print('MSE:', metrics.mean_squared_error(y_test, y_pred_best))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, y_pred_best)))
