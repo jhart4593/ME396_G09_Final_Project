@@ -16,7 +16,7 @@ import json
 import pickle
 
 #data = scipy.io.loadmat('Hourglass_lib_LHS_30K.mat')
-data = pd.read_csv("nanosheet_18K.csv")
+data = pd.read_csv("nanosheet_18k.csv")
 
 # Split the data into inputs and outputs
 X = data.iloc[:, :61]  # Select the first 61 columns as input data
