@@ -178,6 +178,8 @@ plt.legend()
 score = model.score(X_train, y_train)
 print("Training score: ", score)
 
+#----------------------- Cross Validation-------------------------------------------------------------------
+
 # - cross validataion
 scores = cross_val_score(model, X_train, y_train, cv=5)
 print("Mean cross-validation score: %.2f" % scores.mean())
