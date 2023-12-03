@@ -1,4 +1,8 @@
 # ME396_G09_Final_Project
+
+Team:
+Justin Hart, Mobina Tavangarifard, James Wang
+
 We demonstrate the use of a decision tree ML algorithm in predicting large datasets using the XGBoost library
 
 ML_test uses metrology data (nanosheet_18k.csv) to predict critical dimensions of a measured part
