@@ -6,16 +6,16 @@ James Wang, Justin Hart, Mobina Tavangarifard
 We demonstrate the use of a decision tree ML algorithm in predicting large datasets using the XGBoost library.
 
 ## Links
-Project Report: https://docs.google.com/document/d/1RXT-DNYlY3WjcMRRzVr92ZcNn37_6c_yp09cDTvRVfE/edit?usp=sharing 
-Project Presentation: https://docs.google.com/presentation/d/1XiW7GZcUZVbdhYx3ifEzNfSAGtFmcoyo7fH9i1bOLlc/edit?usp=sharing
+- Project Report: https://docs.google.com/document/d/1RXT-DNYlY3WjcMRRzVr92ZcNn37_6c_yp09cDTvRVfE/edit?usp=sharing 
+- Project Presentation: https://docs.google.com/presentation/d/1XiW7GZcUZVbdhYx3ifEzNfSAGtFmcoyo7fH9i1bOLlc/edit?usp=sharing
 
 ## Running the Code
 ### Packages to Install:
-XBGoost - https://xgboost.readthedocs.io/en/stable/install.html#python 
-Numpy - https://numpy.org/install/ 
-Sklearn - https://scikit-learn.org/stable/install.html 
-Matplotlib - https://matplotlib.org/stable/users/installing/index.html 
-Pandas - https://pandas.pydata.org/docs/getting_started/install.html 
+- XBGoost - https://xgboost.readthedocs.io/en/stable/install.html#python 
+- Numpy - https://numpy.org/install/ 
+- Sklearn - https://scikit-learn.org/stable/install.html 
+- Matplotlib - https://matplotlib.org/stable/users/installing/index.html 
+- Pandas - https://pandas.pydata.org/docs/getting_started/install.html 
 
 ### Example Datasets:
 CA Housing:
@@ -25,7 +25,7 @@ CA Housing:
     - To see results of parameter optimized model, run load_best_CA_Housing.py which runs a saved best model
       
 Metrology:
-In Metrology folder on the github repo, open ML_test.py
+- In Metrology folder on the github repo, open ML_test.py
   - Ensure nanosheet_18k.csv is located in the same folder as ML_test.py
   - Run this file to see results of predicting a dataset on metrology measurements
   - To avoid long run times, comment out code for parameter optimized model (best model). This is everything past line 182.
