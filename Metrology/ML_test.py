@@ -315,3 +315,4 @@ plt.xticks(x_pos, bars)
 plt.xlabel('Critical Dimension')
 plt.legend()
 
+plt.show()
