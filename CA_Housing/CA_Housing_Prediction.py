@@ -206,3 +206,5 @@ plt.xlabel('CA Housing Data Point')
 plt.ylabel('Absolute Error ($100k)')
 plt.title('Best Model Prediction vs Actual')
 plt.legend()
+
+plt.show()
