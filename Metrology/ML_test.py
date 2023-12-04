@@ -66,7 +66,7 @@ important_index = [str(5*x+400) for x in model.feature_importances_.argsort()[::
 # In[16]:
 
 
-fig = plt.figure(dpi=1200) # high resolution
+fig = plt.figure
 plt.rcParams.update({'figure.figsize': (12.0, 5.0)})
 plt.rcParams.update({'font.size': 14})
 
@@ -130,7 +130,7 @@ plt.rcParams.update({'font.size': 14})
 # In[31]:
 print(y_pred[rand_index[0]])
 
-fig2=plt.figure(dpi=1200)
+fig2=plt.figure
 plt.subplot(2,2,1)
 plt.scatter([1,2,3,4,5,6,7], y_pred[rand_index[0]],marker='x',color='red',s=30,label='Prediction')
 plt.scatter([1,2,3,4,5,6,7], y_test.iloc[rand_index[0]],marker='o',color='blue',s=100,alpha=0.3,label='Original')
@@ -271,7 +271,7 @@ plt.rcParams.update({'font.size': 14})
 # In[31]:
 
 
-fig3=plt.figure(dpi=1200)
+fig3=plt.figure
 plt.subplot(2,2,1)
 plt.scatter([1,2,3,4,5,6,7], y_pred[rand_index[0]],marker='x',color='red',s=30,label='Prediction')
 plt.scatter([1,2,3,4,5,6,7], y_test.iloc[rand_index[0]],marker='o',color='blue',s=100,alpha=0.3,label='Original')
